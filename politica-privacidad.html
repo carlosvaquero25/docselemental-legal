@@ -10,12 +10,16 @@
   @media (prefers-color-scheme: dark){
     :root { --fg:#f0f0f0; --muted:#b0b0b0; --accent:#ff6b5a; --bg:#161616; --card:#1f1f1f; --border:#2b2b2b; }
   }
-  html,body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+  @font-face{font-family:"Satoshi";src:url("/fonts/Satoshi-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+  @font-face{font-family:"Satoshi";src:url("/fonts/Satoshi-Medium.woff2") format("woff2");font-weight:500;font-display:swap}
+  @font-face{font-family:"Satoshi";src:url("/fonts/Satoshi-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+  html,body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 Satoshi,ui-sans-serif,system-ui,sans-serif}
   main{max-width:720px;margin:0 auto;padding:24px 20px 64px;background:var(--card)}
   h1{font-size:1.75rem;margin:0 0 4px;line-height:1.25}
   h2{font-size:1.15rem;margin:2em 0 .5em;border-bottom:1px solid var(--border);padding-bottom:.3em}
   .meta{color:var(--muted);font-size:.9rem;margin-bottom:1.5em}
-  table{border-collapse:collapse;width:100%;margin:1em 0;font-size:.95rem}
+  .tabla{overflow-x:auto;margin:1em 0}
+  table{border-collapse:collapse;width:100%;margin:0;font-size:.95rem}
   th,td{border:1px solid var(--border);padding:.5em .7em;text-align:left;vertical-align:top}
   th{background:var(--bg);font-weight:600}
   a{color:var(--accent)}
@@ -42,7 +46,7 @@
 <p>Si tienes preguntas sobre esta política o sobre tus datos, escríbenos a ese correo.</p>
 
 <h2>2. Qué datos recogemos y para qué</h2>
-<table>
+<div class="tabla"><table>
 <tr><th>Dato</th><th>De dónde viene</th><th>Para qué se usa</th></tr>
 <tr><td>Correo electrónico</td><td>Lo introduces al registrarte</td><td>Identificarte, iniciar sesión y comunicarnos contigo si hay problemas con tu cuenta.</td></tr>
 <tr><td>Contraseña (cifrada)</td><td>La introduces al registrarte</td><td>Autenticarte. Nunca almacenamos tu contraseña en claro; se usa el sistema de autenticación de Supabase.</td></tr>
@@ -59,7 +63,7 @@
 <tr><td>Mensaje para la persona a la que pides una firma (opcional)</td><td>Lo escribes tú al solicitar la firma</td><td>Incluirlo en el correo que le enviamos con el enlace y guardarlo con la solicitud.</td></tr>
 <tr><td>Firma dibujada y nombre de esa persona</td><td>Los introduce ella al firmar</td><td>Estampar su firma en el documento y dejar constancia del nombre que declara.</td></tr>
 <tr><td>Datos técnicos del escáner: información del dispositivo (fabricante, modelo y versión del sistema), de la app (nombre del paquete y versión), un identificador por instalación que no pretende identificarte a ti ni a tu dispositivo, métricas de rendimiento, tipo de evento, códigos de error y configuración de la función</td><td>Los recoge el componente ML Kit de Google al usar el escáner</td><td>Diagnóstico y analítica de uso de ese componente por parte de Google. Viajan cifrados y ML Kit no los transfiere a terceros. <strong>No incluyen</strong> tus imágenes ni tus documentos.</td></tr>
-</table>
+</table></div>
 
 <h2>3. Qué NO hacemos con tus datos</h2>
 <ul>
@@ -72,7 +76,7 @@
 
 <h2>4. Proveedores que tratan datos por nosotros (encargados)</h2>
 <p>Para que la app funcione usamos los siguientes proveedores. Firmaremos con ellos los contratos de encargo del tratamiento que exige el RGPD (art. 28).</p>
-<table>
+<div class="tabla"><table>
 <tr><th>Proveedor</th><th>Qué hace</th><th>Dónde</th></tr>
 <tr><td>Supabase, Inc.</td><td>Autenticación, base de datos (Postgres) y almacenamiento de los documentos.</td><td>Región UE configurada por el responsable (<code>eu-west-1</code>, Irlanda).</td></tr>
 <tr><td>Google LLC — Play Services, ML Kit Document Scanner</td><td>Reconocimiento de documentos y recorte durante el escaneo. <strong>Las imágenes se procesan en tu dispositivo</strong> y no se envían a Google. Google recibe los datos técnicos indicados en el apartado 2.</td><td>Procesamiento: tu dispositivo. Datos técnicos: infraestructura de Google.</td></tr>
@@ -80,7 +84,7 @@
 <tr><td>Resend (si pides una firma a otra persona)</td><td>Enviar a esa persona el correo con el enlace para firmar. Recibe su dirección de correo, su nombre si lo indicas y el nombre del documento.</td><td>Infraestructura de Resend; puede implicar transferencias fuera de la UE.</td></tr>
 <tr><td>Google LLC — Inicio de sesión con Google (si lo utilizas)</td><td>Comprobar tu identidad al iniciar sesión con Google.</td><td>Infraestructura de Google.</td></tr>
 <tr><td>Google LLC — AdSense (solo en la web docselemental.com, no en la app)</td><td>Muestra anuncios en la web pública para financiar el proyecto. Usa cookies propias y de terceros para medir los anuncios y, si das tu consentimiento, personalizarlos. No tiene acceso a tus documentos ni a los datos de tu cuenta de la app.</td><td>Infraestructura de Google; puede implicar transferencias fuera de la UE según las cláusulas contractuales tipo de Google.</td></tr>
-</table>
+</table></div>
 
 <h2>5. Dónde se guardan tus datos</h2>
 <p>Los documentos y los metadatos se guardan en el proyecto de Supabase del responsable (región UE por defecto, <code>eu-west-1</code>, Irlanda). Se aplica <strong>seguridad a nivel de fila (RLS)</strong>: cada persona solo accede a sus propios documentos. Las comunicaciones viajan <strong>cifradas (HTTPS/TLS)</strong>.</p>
