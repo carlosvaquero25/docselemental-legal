@@ -33,9 +33,11 @@
 <main>
 
 <h1>Política de privacidad — Docselemental</h1>
-<div class="meta"><strong>Versión 1.4</strong> · Última actualización: 15 de noviembre de 2026</div>
+<div class="meta"><strong>Versión 1.5</strong> · Última actualización: 22 de noviembre de 2026</div>
 
-<p>Esta política explica cómo Docselemental (en adelante, "la app") trata los datos personales de las personas usuarias. También es la política de privacidad de la web pública docselemental.com; donde algo solo se aplica a una de las dos, lo decimos expresamente (por ejemplo, los anuncios del apartado 8, que solo están en la web).</p>
+<p>Esta política explica cómo Docselemental (en adelante, "la app") trata los datos personales de las personas usuarias. También es la política de privacidad de la web pública docselemental.com; donde algo solo se aplica a una de las dos, lo decimos expresamente (por ejemplo, las cookies de la web del apartado 8).</p>
+
+<p class="note"><strong>Novedades de la versión 1.5:</strong> desde la versión 1.0.1 de la app hay anuncios de Google AdMob, avisos en el móvil, informes de fallos, foto de perfil y la opción de proteger un PDF con contraseña. Lo explicamos en los apartados 2, 3, 4, 6 y 8.</p>
 
 <h2>1. Responsable del tratamiento</h2>
 <ul>
@@ -63,6 +65,11 @@
 <tr><td>Mensaje para la persona a la que pides una firma (opcional)</td><td>Lo escribes tú al solicitar la firma</td><td>Incluirlo en el correo que le enviamos con el enlace y guardarlo con la solicitud.</td></tr>
 <tr><td>Firma dibujada y nombre de esa persona</td><td>Los introduce ella al firmar</td><td>Estampar su firma en el documento y dejar constancia del nombre que declara.</td></tr>
 <tr><td>Datos técnicos del escáner: información del dispositivo (fabricante, modelo y versión del sistema), de la app (nombre del paquete y versión), un identificador por instalación que no pretende identificarte a ti ni a tu dispositivo, métricas de rendimiento, tipo de evento, códigos de error y configuración de la función</td><td>Los recoge el componente ML Kit de Google al usar el escáner</td><td>Diagnóstico y analítica de uso de ese componente por parte de Google. Viajan cifrados y ML Kit no los transfiere a terceros. <strong>No incluyen</strong> tus imágenes ni tus documentos.</td></tr>
+<tr><td>Foto de perfil (opcional)</td><td>La haces con la cámara o la eliges de tu galería en Perfil</td><td>Mostrarla en tu perfil y en el menú. Se guarda recortada (512 × 512 px) en tu espacio de Supabase y puedes quitarla cuando quieras.</td></tr>
+<tr><td>Identificador del móvil para avisos (token de Firebase Cloud Messaging) e idioma de la app</td><td>Lo genera tu móvil cuando inicias sesión</td><td>Avisarte en el móvil, aunque la app esté cerrada, cuando alguien firma un documento que le pediste. Se da de baja al cerrar sesión.</td></tr>
+<tr><td>Informes de fallos: el error y el estado de la app en ese momento, modelo y versión del sistema del móvil, versión de la app, un identificador de instalación y datos básicos de uso (por ejemplo, cuánto tiempo estuvo la app abierta)</td><td>Los recoge Firebase Crashlytics de Google cuando la app falla</td><td>Encontrar y corregir errores. <strong>No incluyen</strong> tus documentos, tu correo ni tu identificador de cuenta.</td></tr>
+<tr><td>Datos de los anuncios: dirección IP (permite estimar tu ubicación aproximada), ID de publicidad de Android, ID del conjunto de apps, interacciones con la app y con los anuncios (inicios, toques) y datos de rendimiento (tiempo de arranque, fallos, consumo)</td><td>Los recoge el componente de anuncios de Google (Google Mobile Ads, AdMob) en la app</td><td>Mostrar y medir los anuncios, personalizarlos solo si das tu consentimiento y prevenir el fraude. Google los recibe directamente. <strong>No incluyen</strong> tus documentos, tu correo ni los datos de tu cuenta.</td></tr>
+<tr><td>Contraseña para proteger un PDF</td><td>La escribes tú en «Proteger con contraseña»</td><td>Viaja cifrada (HTTPS) a una función de nuestro servidor (Supabase), que crea la copia protegida y te la devuelve. <strong>No se guarda ni se registra</strong>, y la copia protegida tampoco se guarda en el servidor.</td></tr>
 </table></div>
 
 <h2>3. Qué NO hacemos con tus datos</h2>
@@ -70,12 +77,12 @@
 <li><strong>No vendemos</strong> tus datos.</li>
 <li><strong>No compartimos</strong> tus documentos ni los datos de tu cuenta con terceros con fines publicitarios o de marketing.</li>
 <li><strong>No usamos tus documentos</strong> para entrenar modelos de inteligencia artificial.</li>
-<li><strong>La app no incluye</strong> publicidad ni rastreadores publicitarios de terceros. La web docselemental.com sí muestra anuncios de Google AdSense; ver el apartado 8.</li>
-<li><strong>No usamos</strong> herramientas de analítica que te identifiquen (Google Analytics, Firebase Analytics, etc.). El componente ML Kit envía a Google los datos técnicos indicados en el apartado 2.</li>
+<li><strong>No damos a los anunciantes</strong> tus documentos, tu correo ni los datos de tu cuenta. Desde la versión 1.0.1, la app muestra anuncios de Google AdMob para financiarse (uno al abrirla, como mucho cada pocas horas, y a veces un banner pequeño); la web docselemental.com muestra anuncios de Google AdSense. Ver los apartados 2 y 8.</li>
+<li><strong>No usamos</strong> herramientas de analítica de uso como Google Analytics o Firebase Analytics. Sí recogemos informes de fallos (Firebase Crashlytics), y los componentes ML Kit y AdMob envían a Google los datos técnicos indicados en el apartado 2.</li>
 </ul>
 
 <h2>4. Proveedores que tratan datos por nosotros (encargados)</h2>
-<p>Para que la app funcione usamos los siguientes proveedores. Firmaremos con ellos los contratos de encargo del tratamiento que exige el RGPD (art. 28).</p>
+<p>Para que la app funcione usamos los siguientes proveedores. Firmaremos con ellos los contratos de encargo del tratamiento que exige el RGPD (art. 28). En los anuncios (AdMob y AdSense), Google trata además los datos como responsable, según sus propias condiciones y su <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidad</a>.</p>
 <div class="tabla"><table>
 <tr><th>Proveedor</th><th>Qué hace</th><th>Dónde</th></tr>
 <tr><td>Supabase, Inc.</td><td>Autenticación, base de datos (Postgres) y almacenamiento de los documentos.</td><td>Región UE configurada por el responsable (<code>eu-west-1</code>, Irlanda).</td></tr>
@@ -83,6 +90,10 @@
 <tr><td>Google LLC — ML Kit Text Recognition</td><td>Reconocimiento de texto (OCR) de los escaneos. <strong>Las imágenes se procesan en tu dispositivo.</strong> Google recibe los datos técnicos indicados en el apartado 2.</td><td>Procesamiento: tu dispositivo. Datos técnicos: infraestructura de Google.</td></tr>
 <tr><td>Resend (si pides una firma a otra persona)</td><td>Enviar a esa persona el correo con el enlace para firmar. Recibe su dirección de correo, su nombre si lo indicas y el nombre del documento.</td><td>Infraestructura de Resend; puede implicar transferencias fuera de la UE.</td></tr>
 <tr><td>Google LLC — Inicio de sesión con Google (si lo utilizas)</td><td>Comprobar tu identidad al iniciar sesión con Google.</td><td>Infraestructura de Google.</td></tr>
+<tr><td>Google LLC — Firebase Cloud Messaging</td><td>Hacer llegar a tu móvil los avisos de la app («X ha firmado tu documento»). Recibe el identificador del móvil y el texto del aviso.</td><td>Infraestructura de Google; puede implicar transferencias fuera de la UE según las cláusulas contractuales tipo de Google.</td></tr>
+<tr><td>Google LLC — Firebase Crashlytics</td><td>Recoger los informes de fallos del apartado 2. Google los guarda 90 días.</td><td>Infraestructura de Google; puede implicar transferencias fuera de la UE según las cláusulas contractuales tipo de Google.</td></tr>
+<tr><td>Google LLC — AdMob (en la app, desde la versión 1.0.1)</td><td>Muestra anuncios en la app para financiar el proyecto, con los datos de los anuncios del apartado 2. Si estás en el Espacio Económico Europeo, el Reino Unido o Suiza, primero te pregunta si das tu consentimiento (ver el apartado 8). No tiene acceso a tus documentos ni a los datos de tu cuenta.</td><td>Infraestructura de Google; puede implicar transferencias fuera de la UE según las cláusulas contractuales tipo de Google.</td></tr>
+<tr><td>Google LLC — Google Play (valoración dentro de la app)</td><td>Si eliges valorar la app desde ella, lo gestiona Google Play con tu cuenta de Google; nosotros no recibimos tu valoración ni tu cuenta.</td><td>Infraestructura de Google.</td></tr>
 <tr><td>Google LLC — AdSense (solo en la web docselemental.com, no en la app)</td><td>Muestra anuncios en la web pública para financiar el proyecto. Usa cookies propias y de terceros para medir los anuncios y, si das tu consentimiento, personalizarlos. No tiene acceso a tus documentos ni a los datos de tu cuenta de la app.</td><td>Infraestructura de Google; puede implicar transferencias fuera de la UE según las cláusulas contractuales tipo de Google.</td></tr>
 </table></div>
 
@@ -90,7 +101,7 @@
 <p>Los documentos y los metadatos se guardan en el proyecto de Supabase del responsable (región UE por defecto, <code>eu-west-1</code>, Irlanda). Se aplica <strong>seguridad a nivel de fila (RLS)</strong>: cada persona solo accede a sus propios documentos. Las comunicaciones viajan <strong>cifradas (HTTPS/TLS)</strong>.</p>
 
 <h2>6. Cuánto tiempo guardamos tus datos</h2>
-<p>Mientras tu cuenta esté activa. Cuando pidas borrar la cuenta desde <strong>Perfil → Eliminar cuenta y documentos</strong>, se borrarán de forma inmediata: tus documentos, tu perfil y tu usuario del sistema de autenticación. El borrado es definitivo y no se puede deshacer. También puedes pedirlo sin la app en <a href="https://docselemental.com/eliminar-cuenta.html">docselemental.com/eliminar-cuenta.html</a>.</p>
+<p>Mientras tu cuenta esté activa. Cuando pidas borrar la cuenta desde <strong>Perfil → Eliminar cuenta y documentos</strong>, se borrarán de forma inmediata: tus documentos, tu perfil y tu foto de perfil, el registro de tus móviles para los avisos y tu usuario del sistema de autenticación. El borrado es definitivo y no se puede deshacer. Los informes de fallos no van unidos a tu cuenta: Google los borra a los 90 días. Los datos de los anuncios los conserva Google según su <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidad</a>. También puedes pedirlo sin la app en <a href="https://docselemental.com/eliminar-cuenta.html">docselemental.com/eliminar-cuenta.html</a>.</p>
 
 <h2>7. Tus derechos (RGPD)</h2>
 <ul>
@@ -103,19 +114,22 @@
 <h2>8. Permisos, cookies y almacenamiento local</h2>
 <p>La app pide estos permisos del dispositivo, solo cuando usas la función correspondiente:</p>
 <ul>
-<li><strong>Cámara:</strong> para escanear documentos. Puedes usar la app sin concederlo e importar imágenes desde la galería.</li>
+<li><strong>Cámara:</strong> para escanear documentos y, si quieres, hacerte la foto de perfil. Puedes usar la app sin concederlo e importar imágenes desde la galería.</li>
 <li><strong>Huella o biometría:</strong> para el Bloqueo con huella, si lo activas. La comprobación la hace el sistema de tu móvil; la app <strong>nunca recibe ni guarda tu huella</strong>, solo el resultado (correcta o no).</li>
+<li><strong>Notificaciones:</strong> para los avisos de firmas. Si no lo concedes, la app funciona igual, pero sin avisos.</li>
 </ul>
-<p>La app <strong>no</strong> pide permiso de micrófono ni de ubicación.</p>
-<p>La app usa almacenamiento local del dispositivo (<code>SharedPreferences</code>) para guardar: tu firma guardada en Mi firma, que no se sube al servidor salvo cuando firmas un documento; los datos de tu sesión, para no pedirte que entres cada vez; tus preferencias (tema, idioma, formato de exportación, bloqueo con huella y vista de la biblioteca); y la última página leída de cada PDF, el modo "página oscura" del visor y la fecha del último aviso visto. Dentro de la app no usamos cookies de terceros ni de rastreo.</p>
+<p>Además, el componente de anuncios declara el permiso de <strong>ID de publicidad</strong> y los de la Privacy Sandbox de Android (temas de interés y atribución). No te los pide en pantalla: los controlas tú en los ajustes de Android, donde puedes restablecer o borrar el ID de publicidad y desactivar los anuncios basados en tus intereses.</p>
+<p>La app <strong>no</strong> pide permiso de micrófono ni de ubicación. La ubicación aproximada que pueden estimar los anuncios sale de la dirección IP, no del GPS.</p>
+<p>La app usa almacenamiento local del dispositivo (<code>SharedPreferences</code>) para guardar: tu firma guardada en Mi firma, que no se sube al servidor salvo cuando firmas un documento; los datos de tu sesión, para no pedirte que entres cada vez; tus preferencias (tema, idioma, formato de exportación, bloqueo con huella y vista de la biblioteca); y la última página leída de cada PDF, el modo "página oscura" del visor y la fecha del último aviso visto; y cuándo se mostró el último anuncio (para no repetirlos), tu respuesta al aviso de consentimiento de los anuncios y si ya te pedimos que valores la app. Dentro de la app, lo único con fines publicitarios es el componente de anuncios de Google descrito aquí.</p>
+<p><strong>Anuncios en la app.</strong> Desde la versión 1.0.1, la app muestra anuncios de <strong>Google AdMob</strong>: como mucho uno al abrirla cada pocas horas y, de vez en cuando, un banner pequeño encima de la barra de navegación. Nunca en la primera sesión. Si estás en el Espacio Económico Europeo, el Reino Unido o Suiza, antes verás un aviso donde puedes <strong>dar o no dar tu consentimiento</strong> con la misma facilidad; si no lo das, Google solo muestra anuncios no personalizados o limitados. Puedes cambiar tu decisión cuando quieras en <strong>Perfil → Privacidad de los anuncios</strong>.</p>
 <p><strong>Cookies en la web (docselemental.com).</strong> La web pública muestra anuncios con <strong>Google AdSense</strong> para financiar el proyecto. AdSense instala cookies propias y de terceros para medir el rendimiento de los anuncios y, si lo permites, mostrarte anuncios personalizados. Si visitas la web desde el Espacio Económico Europeo, el Reino Unido o Suiza, verás primero un aviso donde puedes <strong>aceptar o rechazar</strong> estas cookies con la misma facilidad; puedes cambiar tu decisión cuando quieras desde ese mismo aviso o desde la configuración de cookies de tu navegador. Más información en la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidad de Google</a> y en <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">cómo usa Google los datos de los sitios que usan sus servicios</a>.</p>
-<p>La app no es una web, no se abre en un navegador y, a día de hoy, no muestra anuncios: nada de esto le afecta.</p>
+<p>Estas cookies son solo de la web: la app no es una web, no se abre en un navegador y no las usa.</p>
 
 <h2>9. Menores de edad</h2>
 <p>La app está pensada para personas mayores de edad (18 años). Si eres menor de 14, no puedes crear una cuenta sin el consentimiento de tus padres o tutores legales.</p>
 
 <h2>10. Seguridad</h2>
-<p>Aplicamos las medidas técnicas y organizativas razonables para proteger tus datos: cifrado en tránsito (TLS), autenticación con contraseñas cifradas y control de acceso por fila (RLS de Supabase). Ningún sistema es infalible. Si detectas una vulnerabilidad, escríbenos a <a href="mailto:vaqueromuelacarlos@gmail.com">vaqueromuelacarlos@gmail.com</a>.</p>
+<p>Aplicamos las medidas técnicas y organizativas razonables para proteger tus datos: cifrado en tránsito (TLS), autenticación con contraseñas cifradas y control de acceso por fila (RLS de Supabase). Los PDF que proteges con contraseña se cifran con AES-256, y ni la contraseña ni la copia protegida se guardan en el servidor. Ningún sistema es infalible. Si detectas una vulnerabilidad, escríbenos a <a href="mailto:vaqueromuelacarlos@gmail.com">vaqueromuelacarlos@gmail.com</a>.</p>
 
 <h2>11. Cambios de esta política</h2>
 <p>Si cambiamos esta política, publicaremos la nueva versión en la app y, si los cambios son significativos, te avisaremos por correo. La fecha de la última revisión aparece al principio.</p>
